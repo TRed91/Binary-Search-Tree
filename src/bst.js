@@ -17,7 +17,7 @@ export class Node {
     right = null;
 }
 
-class Tree {
+export class Tree {
     constructor(arr) {
         this.root = buildTree(arr);
     }
@@ -113,15 +113,3 @@ const buildTree = (array) => {
     let tree = recursiveBuild(sortedArr);
     return tree;
 }
-
-let tree = new Tree([1, 7, 4, 23, 8, 9, 4, 3, 5, 7, 9, 67, 6345, 324])
-
-tree.insert(204)
-tree.insert(504)
-tree.insert(151)
-tree.insert(1604)
-prettyPrint(tree.root)
-console.log(tree.isBalanced())
-tree.rebalance()
-prettyPrint(tree.root)
-console.log(tree.isBalanced())
